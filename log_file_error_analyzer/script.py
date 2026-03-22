@@ -1,16 +1,15 @@
 error_counts = {}
 
-with open("E:\\PadduPythonDevops\\log_file_error_analyzer\\app.log", "r") as file:
+# take file path from user
+log_file = input("Enter log file path: ")
+
+with open(log_file, "r") as file:
     for line in file:
-        if "ERROR" in line or "CRITICAL" in line:
+        if "error" in line.lower() or "critical" in line.lower():
             error = line.strip()
+            error_counts[error] = error_counts.get(error, 0) + 1
 
-            if error in error_counts:
-                error_counts[error] += 1
-            else:
-                error_counts[error] = 1
-
-print("Summary Report:\n")
+print("\nSummary Report:\n")
 
 for error, count in error_counts.items():
     print(f"{error} : {count}")
