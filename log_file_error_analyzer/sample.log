@@ -1,0 +1,9 @@
+[INFO] Application started successfully.
+[WARNING] Low memory detected.
+[ERROR] Failed to connect to database.
+[INFO] User logged in.
+[ERROR] Invalid input received.
+[WARNING] Disk space running low.
+[INFO] Processing completed.
+[ERROR] Network timeout occurred.
+[WARNING] Configuration file not found.
